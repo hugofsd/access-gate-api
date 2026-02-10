@@ -4,6 +4,7 @@ public class Usuario {
 
     private Long id;
     private String email;
+    private String nome;
     private String senha;
     private Boolean administrador;
 
@@ -41,10 +42,26 @@ public class Usuario {
         this.email = email;
     }
 
+    public String getNome() {
+        return nome;
+    }
 
-    public Usuario(String email, Long id, String senha, Boolean administrador) {
-        this.email = email;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Long getIdPessoa() {
+        return idPessoa;
+    }
+
+    public void setIdPessoa(Long idPessoa) {
+        this.idPessoa = idPessoa;
+    }
+
+    public Usuario(Long id,String nome, String email, String senha, Boolean administrador) {
         this.id = id;
+        this.nome = nome;
+        this.email = email;
         this.senha = senha;
         this.administrador = administrador;
     }

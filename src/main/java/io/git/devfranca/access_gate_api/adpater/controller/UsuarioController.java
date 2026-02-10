@@ -19,7 +19,9 @@ public class UsuarioController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public UsuarioDto create(@RequestBody UsuarioDto usuarioDto) {
-      return usuarioConverter.toDto(usuarioServicoPort.createUsuario(usuarioConverter.toTomain(usuarioDto)));
+      return usuarioConverter
+              .toDto(usuarioServicoPort
+                      .createUsuario(usuarioConverter.toTomain(usuarioDto)));
     }
 
 

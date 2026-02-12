@@ -274,18 +274,3 @@ java -jar target/access-gate-api-0.0.1-SNAPSHOT.jar
 ## 📄 Licença
 
 Este projeto é de código aberto e está disponível para fins educacionais e de portfólio.
-
----
-
-## 🔮 Melhorias Futuras
-
-- [ ] Implementar autenticação e autorização (JWT)
-- [ ] Adicionar validações de entrada com Bean Validation
-- [ ] Implementar CRUD completo para todas as entidades
-- [ ] Adicionar documentação Swagger/OpenAPI
-- [ ] Implementar testes de integração
-- [ ] Adicionar suporte a PostgreSQL/MySQL
-- [ ] Implementar funcionalidade de registro de visitas
-- [ ] Adicionar logs estruturados
-- [ ] Implementar paginação nas consultas
-- [ ] Adicionar métricas e health checks

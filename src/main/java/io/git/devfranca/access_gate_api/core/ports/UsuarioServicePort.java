@@ -4,6 +4,10 @@ import io.git.devfranca.access_gate_api.core.domain.Usuario;
 
 public interface UsuarioServicePort {
 
-    Usuario createUsuario(Usuario usuario);
+    public Usuario createUsuario(Usuario usuario);
+
+
+
+
 
 }

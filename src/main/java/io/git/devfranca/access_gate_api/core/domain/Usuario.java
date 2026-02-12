@@ -7,8 +7,21 @@ public class Usuario {
     private String nome;
     private String senha;
     private Boolean administrador;
+    private Pessoa pessoa;
 
-    private Long idPessoa;
+
+    public Usuario(Long id, String nome, String email, String senha, Boolean administrador, Pessoa pessoa) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.administrador = administrador;
+        this.pessoa = pessoa;
+    }
+
+    public Usuario() {
+    }
+
 
     public Long getId() {
         return id;
@@ -50,23 +63,12 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public Long getIdPessoa() {
-        return idPessoa;
+    public Pessoa getPessoa() {
+        return pessoa;
     }
 
-    public void setIdPessoa(Long idPessoa) {
-        this.idPessoa = idPessoa;
-    }
-
-    public Usuario(Long id,String nome, String email, String senha, Boolean administrador) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.administrador = administrador;
-    }
-
-    public Usuario() {
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 }
 

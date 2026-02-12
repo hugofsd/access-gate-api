@@ -7,7 +7,7 @@ public class Morador {
     private String cpf;
     private String endereco;
     private String celular;
-    private Long IdPessoa;
+    private Pessoa pessoa;
 
     public Long getId() {
         return id;
@@ -41,22 +41,23 @@ public class Morador {
         this.endereco = endereco;
     }
 
-    public Long getIdPessoa() {
-        return IdPessoa;
+    public Pessoa getPessoa() {
+        return pessoa;
     }
 
-    public void setIdPessoa(Long idPessoa) {
-        IdPessoa = idPessoa;
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
-    public Morador(Long id, Long idPessoa, String celular, String endereco, String cpf) {
-        this.id = id;
-        IdPessoa = idPessoa;
-        this.celular = celular;
-        this.endereco = endereco;
-        this.cpf = cpf;
-    }
 
     public Morador() {
+    }
+
+    public Morador(Long id, String cpf, String endereco, String celular, Pessoa pessoa) {
+        this.id = id;
+        this.cpf = cpf;
+        this.endereco = endereco;
+        this.celular = celular;
+        this.pessoa = pessoa;
     }
 }

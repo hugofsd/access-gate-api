@@ -3,18 +3,16 @@ package io.git.devfranca.access_gate_api.core.domain;
 public class Visitante {
 
     private Long id;
-
     private String rg;
-
-    private Long IdPessoa;
-
-    public Visitante(Long id, String rg, Long idPessoa) {
-        this.id = id;
-        this.rg = rg;
-        IdPessoa = idPessoa;
-    }
+    private Pessoa pessoa;
 
     public Visitante() {
+    }
+
+    public Visitante(Long id, String rg, Pessoa pessoa) {
+        this.id = id;
+        this.rg = rg;
+        this.pessoa = pessoa;
     }
 
     public Long getId() {
@@ -33,11 +31,11 @@ public class Visitante {
         this.rg = rg;
     }
 
-    public Long getIdPessoa() {
-        return IdPessoa;
+    public Pessoa getPessoa() {
+        return pessoa;
     }
 
-    public void setIdPessoa(Long idPessoa) {
-        IdPessoa = idPessoa;
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 }

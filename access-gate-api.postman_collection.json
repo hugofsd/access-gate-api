@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "access-gate-api-collection",
+		"name": "Access Gate API - Sistema de Controle de Acesso",
+		"description": "Collection completa para testes da API de controle de acesso. Inclui endpoints para gerenciar Moradores, Visitantes e Usuários.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "access-gate-api"
+	},
+	"item": [
+		{
+			"name": "Moradores",
+			"item": [
+				{
+					"name": "Criar Morador",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"João da Silva\",\n  \"cpf\": \"12345678901\",\n  \"endereco\": \"Apto 101 - Bloco A\",\n  \"celular\": \"11987654321\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/moradores",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"moradores"
+							]
+						},
+						"description": "Cria um novo morador no sistema"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos os Moradores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/moradores",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"moradores"
+							]
+						},
+						"description": "Retorna a lista de todos os moradores cadastrados"
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Morador - Maria Oliveira",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Maria Oliveira\",\n  \"cpf\": \"98765432100\",\n  \"endereco\": \"Apto 205 - Bloco B\",\n  \"celular\": \"11912345678\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/moradores",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"moradores"
+							]
+						},
+						"description": "Exemplo adicional de criação de morador"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para gerenciamento de moradores do condomínio"
+		},
+		{
+			"name": "Visitantes",
+			"item": [
+				{
+					"name": "Criar Visitante",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Carlos Santos\",\n  \"rg\": \"123456789\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/visitantes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"visitantes"
+							]
+						},
+						"description": "Registra um novo visitante no sistema"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos os Visitantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/visitantes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"visitantes"
+							]
+						},
+						"description": "Retorna a lista de todos os visitantes cadastrados"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Visitante por RG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/visitantes/123456789",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"visitantes",
+								"123456789"
+							]
+						},
+						"description": "Busca um visitante específico pelo RG"
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Visitante - Ana Costa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Ana Costa\",\n  \"rg\": \"987654321\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/visitantes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"visitantes"
+							]
+						},
+						"description": "Exemplo adicional de criação de visitante"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Visitante - Ana Costa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/visitantes/987654321",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"visitantes",
+								"987654321"
+							]
+						},
+						"description": "Busca o visitante Ana Costa pelo RG"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para gerenciamento de visitantes"
+		},
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Criar Usuário Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Admin Silva\",\n  \"email\": \"admin@accessgate.com\",\n  \"senha\": \"admin123\",\n  \"administrador\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/usuarios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"usuarios"
+							]
+						},
+						"description": "Cria um novo usuário administrador no sistema"
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Usuário Porteiro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"José Porteiro\",\n  \"email\": \"jose.porteiro@accessgate.com\",\n  \"senha\": \"porteiro123\",\n  \"administrador\": false\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/usuarios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"usuarios"
+							]
+						},
+						"description": "Cria um novo usuário porteiro (não administrador)"
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Usuário Gerente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Patricia Gerente\",\n  \"email\": \"patricia.gerente@accessgate.com\",\n  \"senha\": \"gerente123\",\n  \"administrador\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/usuarios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"usuarios"
+							]
+						},
+						"description": "Cria um novo usuário gerente com privilégios de administrador"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para gerenciamento de usuários do sistema"
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
